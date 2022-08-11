@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       //
       console.log(element);
       // the 60 value is actual hight of navbar.
-      let position = element.offsetTop - 60;
+      let position = element.offsetTop - 60.8;
       console.log(position);
 
       window.scrollTo({
