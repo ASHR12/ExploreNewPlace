@@ -1,1 +1,25 @@
 
+Simplified Data Flow
+Databases
+
+AEM uses its internal CRX database.
+An external database (Azure or SQL) is also in play.
+AEM Section
+
+Forms are stored in the AEM Forms Database.
+Users access these forms via the Forms Portal.
+User Actions
+
+Submitter: Opens a form, can save drafts, and submits it.
+Approver: Receives a notification and decides to approve or reject.
+Workflow Inside AEM
+
+Submitter submits a form.
+A notification goes to the Approver's AEM inbox.
+Approver makes a decision:
+If rejected, a notification goes back to the Submitter.
+If approved, the data moves outside AEM to Rule PAPI.
+Workflow Outside AEM
+
+Data goes from Rule PAPI to Fulfillment.
+Finally, it moves from Fulfillment to IQA.
