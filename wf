@@ -1,25 +1,16 @@
+Update on My Furlough Schedule
 
-Simplified Data Flow
-Databases
+Hi XXXX,
 
-AEM uses its internal CRX database.
-An external database (Azure or SQL) is also in play.
-AEM Section
+I hope you're doing well. I wanted to provide a quick update regarding my upcoming furlough period. I've recently received information indicating that my furlough is allocated as 2 weeks in November and 2 weeks in December. However, after discussing with my project teammates, I've already planned my leave as follows:
 
-Forms are stored in the AEM Forms Database.
-Users access these forms via the Forms Portal.
-User Actions
+13th to 17th November (1 week)
+11th to 29th December (3 weeks)
+On a related note, XXXX will be on leave from 20th to 29th November. The good news is that there won't be any impact on our project, as Hirok will be available during my absence from 13th to 19th November.
 
-Submitter: Opens a form, can save drafts, and submits it.
-Approver: Receives a notification and decides to approve or reject.
-Workflow Inside AEM
+XXXX mentioned that updates to the furlough schedule can be made if the manager agrees and sends an email for confirmation. If necessary, we can also seek approval from XXXX.
 
-Submitter submits a form.
-A notification goes to the Approver's AEM inbox.
-Approver makes a decision:
-If rejected, a notification goes back to the Submitter.
-If approved, the data moves outside AEM to Rule PAPI.
-Workflow Outside AEM
+Thanks for understanding.
 
-Data goes from Rule PAPI to Fulfillment.
-Finally, it moves from Fulfillment to IQA.
+Best regards,
+XXXXX
