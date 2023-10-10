@@ -1,1 +1,15 @@
 
+function checkMax3Alphabets(inputField) {
+  // Regular expression to match alphabetic characters
+  var regex = /^[a-zA-Z]+$/;
+
+  // Get the value from the input field
+  var value = inputField.value;
+
+  // Check if the value contains only alphabetic characters and has a length of at most 3
+  if (regex.test(value) && value.length <= 3) {
+    return true;
+  } else {
+    return false;
+  }
+}
