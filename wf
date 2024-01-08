@@ -1,15 +1,24 @@
+function isEighteenOrAbove(dobString) {
+    // Convert DOB from DDMMYYYY format to a Date object
+    var day = parseInt(dobString.substring(0, 2));
+    var month = parseInt(dobString.substring(2, 4)) - 1; // JavaScript months are 0-indexed
+    var year = parseInt(dobString.substring(4, 8));
+    var dob = new Date(year, month, day);
 
-function checkMax3Alphabets(inputField) {
-  // Regular expression to match alphabetic characters
-  var regex = /^[a-zA-Z]+$/;
+    // Get today's date
+    var today = new Date();
+    var age = today.getFullYear() - dob.getFullYear();
+    var m = today.getMonth() - dob.getMonth();
 
-  // Get the value from the input field
-  var value = inputField.value;
+    // If the current month is before the birth month, or it's the birth month but before the birth day, decrease age by 1
+    if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
+        age--;
+    }
 
-  // Check if the value contains only alphabetic characters and has a length of at most 3
-  if (regex.test(value) && value.length <= 3) {
-    return true;
-  } else {
-    return false;
-  }
+    // Check if age is 18 or above
+    return age >= 18;
 }
+
+// Example usage
+var dobString = "01011990"; // Replace with actual DOB in DDMMYYYY format
+console.log(isEighteenOrAbove(dobString)); // Output: true or false
