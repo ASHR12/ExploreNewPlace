@@ -1,24 +1,26 @@
-function isEighteenOrAbove(dobString) {
-    // Convert DOB from DDMMYYYY format to a Date object
-    var day = parseInt(dobString.substring(0, 2));
-    var month = parseInt(dobString.substring(2, 4)) - 1; // JavaScript months are 0-indexed
-    var year = parseInt(dobString.substring(4, 8));
-    var dob = new Date(year, month, day);
+function isTwentyAndHalfOrAbove(dobString) {
+    // Convert DOB from YYYY-MM-DD format to a Date object
+    var dob = new Date(dobString);
 
     // Get today's date
     var today = new Date();
-    var age = today.getFullYear() - dob.getFullYear();
-    var m = today.getMonth() - dob.getMonth();
+    var ageYears = today.getFullYear() - dob.getFullYear();
+    var ageMonths = today.getMonth() - dob.getMonth();
+    var ageDays = today.getDate() - dob.getDate();
 
-    // If the current month is before the birth month, or it's the birth month but before the birth day, decrease age by 1
-    if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) {
-        age--;
+    // Adjust the age in months and years if necessary
+    if (ageMonths < 0 || (ageMonths === 0 && ageDays < 0)) {
+        ageYears--;
+        ageMonths += 12;
     }
 
-    // Check if age is 18 or above
-    return age >= 18;
+    // Calculate total age in months
+    var totalAgeInMonths = ageYears * 12 + ageMonths;
+
+    // Check if age is 20.5 years or above (20 years and 6 months)
+    return totalAgeInMonths >= (20 * 12 + 6);
 }
 
 // Example usage
-var dobString = "01011990"; // Replace with actual DOB in DDMMYYYY format
-console.log(isEighteenOrAbove(dobString)); // Output: true or false
+var dobString = "2003-07-15"; // Replace with actual DOB in YYYY-MM-DD format
+console.log(isTwentyAndHalfOrAbove(dobString)); // Output: true or false
