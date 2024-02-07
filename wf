@@ -1,26 +1,28 @@
-function isTwentyAndHalfOrAbove(dobString) {
-    // Convert DOB from YYYY-MM-DD format to a Date object
-    var dob = new Date(dobString);
+Hi Rahul,
 
-    // Get today's date
-    var today = new Date();
-    var ageYears = today.getFullYear() - dob.getFullYear();
-    var ageMonths = today.getMonth() - dob.getMonth();
-    var ageDays = today.getDate() - dob.getDate();
+Below are the details for my expenses, but I am encountering issues while claiming this settlement as it involves eligible amounts.
 
-    // Adjust the age in months and years if necessary
-    if (ageMonths < 0 || (ageMonths === 0 && ageDays < 0)) {
-        ageYears--;
-        ageMonths += 12;
-    }
+1. The air ticket was booked by the team, so I don't have any claims there.
 
-    // Calculate total age in months
-    var totalAgeInMonths = ageYears * 12 + ageMonths;
+2. Hotel Accommodation cost was: ₹17,780, but the eligible amount is ₹11,475. This results in a difference of ₹6,305.
 
-    // Check if age is 20.5 years or above (20 years and 6 months)
-    return totalAgeInMonths >= (20 * 12 + 6);
-}
+3. I also don't see an option for food claims. The total food claim is: ₹1,882.66, detailed as follows:
+   - Food 1: ₹378 - Evening snacks, 4th
+   - Food 2: ₹233.66 - Dinner, 4th
+   - Food 3: ₹118 - Lunch, 5th
+   - Food 4: ₹423 - Dinner, 5th
+   - Food 5: ₹730 - Lunch and Dinner, 6th
+   - Food Total: ₹1,882.66
 
-// Example usage
-var dobString = "2003-07-15"; // Replace with actual DOB in YYYY-MM-DD format
-console.log(isTwentyAndHalfOrAbove(dobString)); // Output: true or false
+4. There is no option for cab expenses claims. I have a total of ₹4,160.06 for cab expenses, detailed as follows:
+   - Cab 1: Bangalore Home to Airport - ₹799.96
+   - Cab 2: Hyderabad Airport to Hotel - ₹979.98
+   - Cab 3: Hotel to Office - ₹115.10
+   - Cab 4: Office to Hotel - ₹110.26
+   - Cab 5: Hyderabad Hotel to Airport - ₹829.99
+   - Cab 6: Bangalore Airport to Home - ₹1,324.77
+   - Cab Total: ₹4,160.06
+
+I have all original bills with me, but I am unable to claim them. I need help.
+
+Thank you.
