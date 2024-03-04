@@ -1,28 +1,22 @@
-Hi Rahul,
+Apologies for the oversight. Here's the revised version including the problem statement:
 
-Below are the details for my expenses, but I am encountering issues while claiming this settlement as it involves eligible amounts.
+**Problem Statement:**
+Currently, our build process is manual, requiring someone to manually trigger the build after each merge on the UAT environment. This approach is time-consuming and prone to delays.
 
-1. The air ticket was booked by the team, so I don't have any claims there.
+**Solution Overview:**
+To address this issue, we propose automating the build process using GitHub webhooks, which will enable Jenkins to automatically start builds when code is merged into the DEV/UAT environments. It's important to note that this automation will not apply to the production environment, where manual control will be maintained for safety.
 
-2. Hotel Accommodation cost was: ₹17,780, but the eligible amount is ₹11,475. This results in a difference of ₹6,305.
+**Steps:**
 
-3. I also don't see an option for food claims. The total food claim is: ₹1,882.66, detailed as follows:
-   - Food 1: ₹378 - Evening snacks, 4th
-   - Food 2: ₹233.66 - Dinner, 4th
-   - Food 3: ₹118 - Lunch, 5th
-   - Food 4: ₹423 - Dinner, 5th
-   - Food 5: ₹730 - Lunch and Dinner, 6th
-   - Food Total: ₹1,882.66
+1. Configure Jenkins jobs to use the GitHub hook trigger for GIT SCM polling.
+2. Enter the details of the GitHub repository.
+3. Manage user permissions and access.
+4. Set up a webhook in GitHub to connect with Jenkins.
+5. Perform tests to ensure the webhook is functioning correctly.
 
-4. There is no option for cab expenses claims. I have a total of ₹4,160.06 for cab expenses, detailed as follows:
-   - Cab 1: Bangalore Home to Airport - ₹799.96
-   - Cab 2: Hyderabad Airport to Hotel - ₹979.98
-   - Cab 3: Hotel to Office - ₹115.10
-   - Cab 4: Office to Hotel - ₹110.26
-   - Cab 5: Hyderabad Hotel to Airport - ₹829.99
-   - Cab 6: Bangalore Airport to Home - ₹1,324.77
-   - Cab Total: ₹4,160.06
+**Benefits:**
 
-I have all original bills with me, but I am unable to claim them. I need help.
-
-Thank you.
+- **Increased Efficiency:** Automates the build process, significantly reducing the time and effort required for manual builds.
+- **Consistent Integration:** Automatically triggers builds for every merge, ensuring consistent and reliable integration testing.
+- **Immediate Feedback:** Provides developers with immediate feedback on their merges, facilitating the quick identification and resolution of issues.
+- **Resource Optimization:** Reduces the need for manual intervention, allowing team members to focus on more strategic tasks.
