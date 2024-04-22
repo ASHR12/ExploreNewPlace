@@ -1,7 +1,1 @@
-AEM Adaptive Forms, part of Adobe Experience Manager (AEM) CMS, allows for rapid design and deployment of forms.
-As per the current architecture:
-Internal forms can be hosted on the HSBC network for staff.
-Integration with Rule PAPI and IQA is feasible.
-Comprehensive form validation is supported.
-Features include support for attachments and scribble signatures, as demonstrated.
-Development and deployment of customer-facing forms can be discussed and implemented with the Architect's guidance.
+
