@@ -1,22 +1,7 @@
-Apologies for the oversight. Here's the revised version including the problem statement:
-
-**Problem Statement:**
-Currently, our build process is manual, requiring someone to manually trigger the build after each merge on the UAT environment. This approach is time-consuming and prone to delays.
-
-**Solution Overview:**
-To address this issue, we propose automating the build process using GitHub webhooks, which will enable Jenkins to automatically start builds when code is merged into the DEV/UAT environments. It's important to note that this automation will not apply to the production environment, where manual control will be maintained for safety.
-
-**Steps:**
-
-1. Configure Jenkins jobs to use the GitHub hook trigger for GIT SCM polling.
-2. Enter the details of the GitHub repository.
-3. Manage user permissions and access.
-4. Set up a webhook in GitHub to connect with Jenkins.
-5. Perform tests to ensure the webhook is functioning correctly.
-
-**Benefits:**
-
-- **Increased Efficiency:** Automates the build process, significantly reducing the time and effort required for manual builds.
-- **Consistent Integration:** Automatically triggers builds for every merge, ensuring consistent and reliable integration testing.
-- **Immediate Feedback:** Provides developers with immediate feedback on their merges, facilitating the quick identification and resolution of issues.
-- **Resource Optimization:** Reduces the need for manual intervention, allowing team members to focus on more strategic tasks.
+AEM Adaptive Forms, part of Adobe Experience Manager (AEM) CMS, allows for rapid design and deployment of forms.
+As per the current architecture:
+Internal forms can be hosted on the HSBC network for staff.
+Integration with Rule PAPI and IQA is feasible.
+Comprehensive form validation is supported.
+Features include support for attachments and scribble signatures, as demonstrated.
+Development and deployment of customer-facing forms can be discussed and implemented with the Architect's guidance.
